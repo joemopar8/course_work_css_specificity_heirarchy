@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selector Specificity</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title" id="title">
+      CSS Selector Specificity 'Hierarchy': 1. Inline Styles 2. ID's 3. Classes
+      4. Elements
+    </h2>
+    (*In index.html: h2 class="title" id="title">CSS Specificity
+    'Hierarchy')(*In style.css: class=blue & id=brown)(*The color is brown
+    because the 'id' selector rules over 'class' in CSS)
+
+    <hr />
+
+    <h2>How to become a Web Developer</h2>
+    (*h2 Element)(*In style.css: h2 { color: gold;})(*Element Selector)
+
+    <hr />
+
+    <p style="color: green" id="title">Inline Styles are #1 in the Hierarchy</p>
+    (*Paragraph element)(*In index.html: p style="color: green"
+    id="title">Inline Styles are #1 in the Hierarchy) (*Inline style selectors
+    rule over all the others so the line is green) (*The line would be green
+    except for the '!important' rule in style.css below)
+
+    <hr />
+
+    <p>
+      The '!Important' rule will override ALL previous styling rules in all the
+      Selected Elements
+    </p>
+    (*Paragraph element)(*In style.css: p { color: palevioletred !important; })
+
+    <hr />
+
+    <div class="container">
+      <h2 class="box" id="box">Nested Selector Specificity</h2>
+      (*In index.html: h2 class="box" id="box">Nested Selector Specificity, is
+      'nested' within a: div class="container")(*In style.css: #box { color:
+      red; } & .container #box {color: chocolate;} & .container .box { color:
+      aqua; } & .container h2 { color: chartreuse; })(*color: chocolate; wins
+      the specificity hierarchy)(*If the nested selectors in style.css were
+      unnested, the color would be red!)
+      <p>Kitty ipsum dolor, sit amet</p>
+    </div>
+  </body>
+</html>

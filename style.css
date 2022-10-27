@@ -1,0 +1,36 @@
+/* Element Selector */
+h2 {
+  color: gold;
+}
+
+/* Class Selector */
+.title {
+  color: blue;
+}
+
+/* ID Selector */
+#title {
+  color: brown;
+}
+
+/* '!important' Rule */
+p {
+  color: palevioletred !important;
+}
+
+/* Nested Selectors */
+.container #box {
+  color: chocolate;
+}
+
+.container .box {
+  color: aqua;
+}
+
+.container h2 {
+  color: chartreuse;
+}
+
+#box {
+  color: red;
+}
